@@ -22,11 +22,11 @@ var isTyler = function(name) {
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
 
-  var getName = function() {
-    var name = prompt("What is your name?")
-    return name;
-  }
-  var myName = getName();
+var getName = function() {
+  var name = prompt("What is your name?")
+  return name;
+}
+var myName = getName();
 
 //Next Problem
 
@@ -35,10 +35,10 @@ var isTyler = function(name) {
 //Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
 //then alerts "Welcome, " plus whatever the users name is.
 
-  var welcome = function() {
-    var user = getName();
-    alert("Welcome, " + user);
-  }
+var welcome = function() {
+  var user = getName();
+  alert("Welcome, " + user);
+}
 
 
 //Next problem
@@ -51,7 +51,7 @@ var isTyler = function(name) {
 //returned from adder.
 
 var adder = function(arguments) {
-  var sum = arguments + arguments;
+  var sum = arguments + arguments; // will fix this in the future, did not learn this today!
   return sum;
 }
 
@@ -76,13 +76,13 @@ alert("The Total Number was " + adderSum);
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
 
-  //falsy values = undefined, null, NaN, 0, "", false;
-  // you can check with an if statement to see if it is defined or exists:
-  /* if(name) {
+  /* falsy values = undefined, null, NaN, 0, "", false;
+   you can check with an if statement to see if it is defined or exists:
+   if(name) {
     return true;
   } else {
   return false;
-  }
+  } */
 
 
 
@@ -92,15 +92,17 @@ alert("The Total Number was " + adderSum);
 
 //Create a function called myName that returns your name
 
-  
+var myName = function() {
+  return "Logan";
+}
 
 //Now save the function definition of myName into a new variable called newMyName
 
-  //Code Here
+var newMyName = myName;
 
 //Now alert the result of invoking newMyName
 
-
+alert(newMyName());
 
 //Next problem
 
@@ -108,10 +110,25 @@ alert("The Total Number was " + adderSum);
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
-  //Code Here
+var outerFn = function() {
+  return function() {
+    return "logan";
+  }
+}
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-  //Code Here
+var innerFn = outerFn();
 
 //Now invoke innerFn.
+
+innerFn();
+
+
+
+
+
+
+
+
+
