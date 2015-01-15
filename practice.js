@@ -50,12 +50,15 @@ var welcome = function() {
 //Save the result of the return value from your adder function, then alert "The Total Number was " + the number that was
 //returned from adder.
 
-var adder = function(arguments) {
-  var sum = arguments + arguments; // will fix this in the future, did not learn this today!
+var adder = function() {
+  var sum = 0;
+  for (var i = 0; i <  arguments.length; i++) {
+    sum = sum + arguments[i];
+  } 
   return sum;
 }
 
-var adderSum = adder();
+var adderSum = adder(1,2,3,4,5);
 alert("The Total Number was " + adderSum);
 
 
